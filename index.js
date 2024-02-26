@@ -4,7 +4,7 @@ var port='3600';
 mongoose.promise=global.Promise;
 mongoose.set("strictQuery",false);
 var app=require('./app');
-mongoose.connect('mongodb://ec2-3-18-180-17.us-east-2.compute.amazonaws.com:27017/hotel')
+mongoose.connect('mongodb://3.18.180.17:27017/hotel')
 .then(()=>{
     console.log("Conexion a BDD");
     app.listen(port,()=>{
